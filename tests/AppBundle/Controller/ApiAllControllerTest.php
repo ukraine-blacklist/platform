@@ -95,7 +95,6 @@ class ApiAllControllerTest extends WebTestCase
         $client->request('GET', '/api/v1/estate/advertisement/search.json', [
             'url' => 'http://somesite.ua/room/29',
             'phones' => [
-                '380630000000',
                 '+38 (063) 000-00-00',
                 '380931111111',
                 '380932222222',

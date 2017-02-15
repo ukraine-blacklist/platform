@@ -83,10 +83,16 @@ class ApiEstateAdvertisementController extends ApiAbstractController
 
         $phoneService = $this->get('est.phone');
 
-        $phones = array_unique(array_filter($requestPhones, [$phoneService, 'valid']));
+        $phones = [];
+
+        foreach ($requestPhones as $phone) {
+            if ($phoneService->valid($phone)) {
+                $phones[] = $phoneService->normalize($phone);
+            }
+        }
 
         return $this->successResponse([
-            'items' => $this->get('est.advertisement')->findByContacts($url, $phones)
+            'items' => $this->get('est.advertisement')->findByContacts($url, array_unique($phones))
         ]);
     }
 }
