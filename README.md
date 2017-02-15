@@ -1,4 +1,4 @@
-# blacklist
+# Platform
 
 [![Build Status](https://travis-ci.org/ukraine-blacklist/platform.svg)](https://travis-ci.org/ukraine-blacklist/platform)
 
@@ -6,6 +6,3 @@
 ```bash
 php bin/console server:run
 ```
-
-##### TODO:
-* `Phone validation`

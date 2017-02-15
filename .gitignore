@@ -13,5 +13,6 @@ vendor
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
+/web/bundles/
 /app/config/parameters.yml
 composer.lock
